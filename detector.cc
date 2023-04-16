@@ -33,3 +33,4 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 //In this .cc file we first get all total energy deposited in the simulation
 //Then write an if code that will extract only the optical photons and give us their total energies
 //If you only write the total energy deposited verison of it you will see a lot of '0's because the optical photons were newly created therefore they wont be able to deposit any energy
+//In the last part we fill the csv file with the resulted optical photon energies
