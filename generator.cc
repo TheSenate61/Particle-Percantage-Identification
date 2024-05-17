@@ -29,7 +29,7 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
     fParticleGun->SetParticlePosition(posP);
     fParticleGun->SetParticleMomentumDirection(momP);
     G4double proton_energy = G4UniformRand() * (1.4 - 0.7) + 0.7; // generate a random energy
-    fParticleGun->SetParticleEnergy(proton_energy * GeV);
+    fParticleGun->SetParticleMomentum(proton_energy * GeV);
     fParticleGun->GeneratePrimaryVertex(anEvent);
     
     // Generate electrons
@@ -40,7 +40,7 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
     fParticleGun->SetParticlePosition(posE);
     fParticleGun->SetParticleMomentumDirection(momE);
     G4double electron_energy = G4UniformRand() * (1.8 - 0.7) + 0.7; // generate a random energy
-    fParticleGun->SetParticleEnergy(electron_energy * GeV);
+    fParticleGun->SetParticleMomentum(electron_energy * GeV);
     fParticleGun->GeneratePrimaryVertex(anEvent);
     
     // Generate kaons
@@ -51,7 +51,7 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
     fParticleGun->SetParticlePosition(posK);
     fParticleGun->SetParticleMomentumDirection(momK);   
     G4double kaon_energy = G4UniformRand() * (1.8 - 0.7) + 0.7; // generate a random energy
-    fParticleGun->SetParticleEnergy(kaon_energy * GeV);
+    fParticleGun->SetParticleMomentum(kaon_energy * GeV);
     fParticleGun->GeneratePrimaryVertex(anEvent);
     
     // Generate pions
@@ -62,7 +62,7 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
     fParticleGun->SetParticlePosition(posPi);
     fParticleGun->SetParticleMomentumDirection(momPi);   
     G4double pion_energy = G4UniformRand() * (1.8 - 0.7) + 0.7; // generate a random energy
-    fParticleGun->SetParticleEnergy(pion_energy * GeV);
+    fParticleGun->SetParticleMomentum(pion_energy * GeV);
     fParticleGun->GeneratePrimaryVertex(anEvent);
 
     G4CsvAnalysisManager *man = G4CsvAnalysisManager::Instance();
